@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Dhot Dairy Farm | Milk Near Me&lt;/title&gt;</p>
+<p class="p1">&lt;meta name="description" content="Order fresh milk online in Jogipura. Dhot Dairy Farm provides daily delivery."&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">body{margin:0;font-family:Arial}</p>
+<p class="p1">header{background:#2e7d32;color:#fff;text-align:center;padding:20px}</p>
+<p class="p1">nav{background:#1b5e20;text-align:center;padding:10px}</p>
+<p class="p1">nav a{color:#fff;margin:10px;text-decoration:none}</p>
+<p class="p1">section{padding:30px}</p>
+<p class="p1">.hero{background:#e8f5e9;text-align:center}</p>
+<p class="p1">.btn{background:#2e7d32;color:#fff;padding:10px 20px;border:none;border-radius:5px}</p>
+<p class="p1">input,select{width:100%;padding:10px;margin:8px 0}</p>
+<p class="p1">form{max-width:400px;margin:auto}</p>
+<p class="p1">footer{background:#1b5e20;color:#fff;text-align:center;padding:10px}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function sendOrder(){</p>
+<p class="p1">let name=document.getElementById('name').value;</p>
+<p class="p1">let phone=document.getElementById('phone').value;</p>
+<p class="p1">let qty=document.getElementById('qty').value;</p>
+<p class="p1">let plan=document.getElementById('plan').value;</p>
+<p class="p2"><br></p>
+<p class="p1">// GOOGLE SHEET (replace URL later)</p>
+<p class="p1">fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",{</p>
+<p class="p1">method:"POST",</p>
+<p class="p1">body:JSON.stringify({name,phone,qty,plan})</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">let msg=`Order:%0AName:${name}%0APhone:${phone}%0AQty:${qty}%0APlan:${plan}`;</p>
+<p class="p1">window.open(`https://wa.me/919012020920?text=${msg}`);</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1">&lt;h1&gt;Dhot Dairy Farm&lt;/h1&gt;</p>
+<p class="p1">&lt;p&gt;Fresh Milk Near You | Jogipura&lt;/p&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1">&lt;a href="#"&gt;Home&lt;/a&gt;</p>
+<p class="p1">&lt;a href="#order"&gt;Order&lt;/a&gt;</p>
+<p class="p1">&lt;a href="#payment"&gt;Payment&lt;/a&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="hero"&gt;</p>
+<p class="p1">&lt;h2&gt;Order Milk Online&lt;/h2&gt;</p>
+<p class="p1">&lt;a href="#order" class="btn"&gt;Order Now&lt;/a&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="order"&gt;</p>
+<p class="p1">&lt;h2&gt;Order Form&lt;/h2&gt;</p>
+<p class="p1">&lt;form onsubmit="event.preventDefault();sendOrder();"&gt;</p>
+<p class="p1">&lt;input id="name" placeholder="Name" required&gt;</p>
+<p class="p1">&lt;input id="phone" placeholder="Phone" required&gt;</p>
+<p class="p1">&lt;select id="qty"&gt;&lt;option&gt;1&lt;/option&gt;&lt;option&gt;2&lt;/option&gt;&lt;option&gt;5&lt;/option&gt;&lt;/select&gt;</p>
+<p class="p1">&lt;select id="plan"&gt;&lt;option&gt;Daily&lt;/option&gt;&lt;option&gt;Monthly&lt;/option&gt;&lt;/select&gt;</p>
+<p class="p1">&lt;button class="btn"&gt;Submit&lt;/button&gt;</p>
+<p class="p1">&lt;/form&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="payment"&gt;</p>
+<p class="p1">&lt;h2&gt;Pay via UPI&lt;/h2&gt;</p>
+<p class="p1">&lt;img src="upi.png" width="250"&gt;</p>
+<p class="p1">&lt;p&gt;Scan &amp; Pay&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1">&lt;h2&gt;Hindi Version&lt;/h2&gt;</p>
+<p class="p1">&lt;p&gt;ताजा दूध घर तक डिलीवरी। अभी ऑर्डर करें।&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1">&lt;p&gt;© Dhot Dairy Farm&lt;/p&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
